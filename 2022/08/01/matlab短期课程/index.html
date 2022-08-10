@@ -29,7 +29,7 @@
 <meta property="og:description" content="课程介绍 学习matlab对于工科生和理科生都是相当重要的，而且matlab的集成效果相当好。算法实现和直观图像结果是matlab的优点。 课程视频：B站MATLAB教程——台大郭彦甫">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-01T05:31:24.000Z">
-<meta property="article:modified_time" content="2022-08-09T12:03:28.771Z">
+<meta property="article:modified_time" content="2022-08-10T15:25:54.782Z">
 <meta property="article:author" content="邹铭">
 <meta property="article:tag" content="matlab">
 <meta property="article:tag" content="数学建模">
@@ -130,7 +130,8 @@ object</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class
 an object</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#fetching-or-modifying-properties"><span class="nav-number">5.2.4.2.</span> <span class="nav-text">fetching or modifying
 properties</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#getting-object-properties"><span class="nav-number">5.2.4.3.</span> <span class="nav-text">getting object properties</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#modifying-properties"><span class="nav-number">5.2.4.4.</span> <span class="nav-text">modifying properties</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#line-specification"><span class="nav-number">5.2.5.</span> <span class="nav-text">line specification</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#marker-specification"><span class="nav-number">5.2.6.</span> <span class="nav-text">marker specification</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#multiple-figures"><span class="nav-number">5.2.7.</span> <span class="nav-text">multiple figures</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#control-of-grid-and-box-and-axis"><span class="nav-number">5.2.8.</span> <span class="nav-text">control of grid and box and
 axis</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#saving-figures-into-files"><span class="nav-number">5.2.9.</span> <span class="nav-text">saving figures into files</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6%E7%BB%98%E5%9B%BE"><span class="nav-number">6.</span> <span class="nav-text">进阶绘图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#advanced-2d-plots"><span class="nav-number">6.1.</span> <span class="nav-text">advanced 2D plots</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#special-plots"><span class="nav-number">6.1.1.</span> <span class="nav-text">special plots</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#logarithm-plots"><span class="nav-number">6.1.2.</span> <span class="nav-text">logarithm plots</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#histogram"><span class="nav-number">6.1.3.</span> <span class="nav-text">histogram</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bar-charts"><span class="nav-number">6.1.4.</span> <span class="nav-text">bar charts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pie-charts"><span class="nav-number">6.1.5.</span> <span class="nav-text">pie charts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#polar-char"><span class="nav-number">6.1.6.</span> <span class="nav-text">polar char</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stairs-and-stem-charts"><span class="nav-number">6.1.7.</span> <span class="nav-text">stairs and stem charts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#boxplot-and-error-bar"><span class="nav-number">6.1.8.</span> <span class="nav-text">boxplot and error bar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stop-sign"><span class="nav-number">6.1.9.</span> <span class="nav-text">stop sign</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#color-space"><span class="nav-number">6.2.</span> <span class="nav-text">color space</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#visualizing-data-as-an-imageimagesc"><span class="nav-number">6.2.1.</span> <span class="nav-text">visualizing data as an
-image:imagesc()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#d-plots"><span class="nav-number">6.3.</span> <span class="nav-text">3D plots</span></a></li></ol></li></ol></div>
+image:imagesc()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#d-plots"><span class="nav-number">6.3.</span> <span class="nav-text">3D plots</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#principles-of-3d-surface-plots"><span class="nav-number">6.3.1.</span> <span class="nav-text">principles of 3D surface
+plots</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -230,7 +231,7 @@ image:imagesc()</span></a></li></ol></li><li class="nav-item nav-level-3"><a cla
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 20:03:28" itemprop="dateModified" datetime="2022-08-09T20:03:28+08:00">2022-08-09</time>
+      <time title="修改时间：2022-08-10 23:25:54" itemprop="dateModified" datetime="2022-08-10T23:25:54+08:00">2022-08-10</time>
     </span>
 
   
@@ -1131,9 +1132,138 @@ alt="结果" /> - color bar and scheme</p>
 </tbody>
 </table>
 <ul>
-<li>build-in colormaps</li>
+<li>build-in colormaps
+<ul>
+<li>use built-in color maps<code>colormap([name])</code></li>
+<li>a color map is a matrix of 256 times 3
+<code>a=colormap(prism)</code></li>
+<li>use a customized color map
+<code>a=ones(256,3; colormap(a);</code></li>
+</ul></li>
 </ul>
 <h3 id="d-plots">3D plots</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Function</th>
+<th style="text-align: center;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>plot3</code></td>
+<td style="text-align: center;">3-D line plot</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>surf</code></td>
+<td style="text-align: center;">3-D shaded surface plot</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>surfc</code></td>
+<td style="text-align: center;">contour(轮廓) plot under a 3-D shaded
+surface plot</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>surface</code></td>
+<td style="text-align: center;">create surface object</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>meshc</code></td>
+<td style="text-align: center;">plot a contour graph under mesh
+graph</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>contour</code></td>
+<td style="text-align: center;">contour plot of matrix</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>contourf</code></td>
+<td style="text-align: center;">filled 2-D contour plot</td>
+</tr>
+</tbody>
+</table>
+<p>2D vs 3D 2D的图像也可以显示在3D上面。</p>
+<p><code>plot3()</code><br />
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%%</span></span><br><span class="line">x=<span class="number">0</span>:<span class="number">0.1</span>:<span class="number">3</span>*<span class="built_in">pi</span>;z1=<span class="built_in">sin</span>(x);z2=<span class="built_in">sin</span>(<span class="number">2</span>*x);z3=<span class="built_in">sin</span>(<span class="number">3</span>*x);</span><br><span class="line">y1=<span class="built_in">zeros</span>(<span class="built_in">size</span>(x));y3=<span class="built_in">ones</span>(<span class="built_in">size</span>(x));y2=y3./<span class="number">2</span>;</span><br><span class="line"><span class="built_in">plot3</span>(x,y1,z1,<span class="string">&#x27;r&#x27;</span>,x,y2,z2,<span class="string">&#x27;b&#x27;</span>,x,y3,z3,<span class="string">&#x27;g&#x27;</span>);grid on;</span><br><span class="line">xlabel(<span class="string">&#x27;x-axis&#x27;</span>); ylabel(<span class="string">&#x27;y-axis&#x27;</span>);zlabel(<span class="string">&#x27;z-label&#x27;</span>);</span><br><span class="line"><span class="comment">%%</span></span><br><span class="line">clear;</span><br><span class="line">t=<span class="number">0</span>:<span class="built_in">pi</span>/<span class="number">50</span>:<span class="number">10</span>*<span class="built_in">pi</span>;</span><br><span class="line"><span class="built_in">plot3</span>(<span class="built_in">sin</span>(t),<span class="built_in">cos</span>(t),t);</span><br><span class="line">grid on; axis square;</span><br><span class="line"><span class="comment">%%</span></span><br><span class="line">turns=<span class="number">40</span>*<span class="built_in">pi</span>;</span><br><span class="line">t=<span class="built_in">linspace</span>(<span class="number">0</span>,turns,<span class="number">400</span>);</span><br><span class="line">x=<span class="built_in">cos</span>(t).*(turns-t)./turns;</span><br><span class="line">y=<span class="built_in">sin</span>(t).*(turns-t)./turns;</span><br><span class="line">z=t./turns;</span><br><span class="line"><span class="built_in">plot3</span>(x,y,z);grid on;</span><br><span class="line"></span><br></pre></td></tr></table></figure> <img
+src="https://pic4.zhimg.com/80/v2-8429d854c18ebf5d99eda26aa36d3455.jpg"
+alt="结果1" /> <img
+src="https://pic4.zhimg.com/80/v2-c9953fcbffb684b408dd2cc9469ea67e.jpg"
+alt="结果2" /> <img
+src="https://pic4.zhimg.com/80/v2-3aed14823f5db002abf9e3e2a5b3e1e7.jpg"
+alt="结果3" /> 这里是线穿起来的三维图，vector确定点，点连为线</p>
+<h4 id="principles-of-3d-surface-plots">principles of 3D surface
+plots</h4>
+<ul>
+<li>usually for plotting functions:<span
+class="math inline">\(z=f(x,y)\)</span></li>
+<li>need to provide matlab a set of (x,y,z) points</li>
+<li>use <code>meshgrid</code> to create matrices X and Y for a given
+range</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">-2</span>:<span class="number">1</span>:<span class="number">2</span>;</span><br><span class="line">y=<span class="number">-2</span>:<span class="number">1</span>:<span class="number">2</span>;</span><br><span class="line">[X,Y]=<span class="built_in">meshgrid</span>(x,y);X和Y是矩阵,得到矩阵尤为重要</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+<p><code>mesh()</code>and<code>surf()</code><br />
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">-3.5</span>:<span class="number">0.2</span>:<span class="number">3.5</span>;</span><br><span class="line">y=<span class="number">-3.5</span>:<span class="number">0.2</span>:<span class="number">3.5</span>;</span><br><span class="line">[X,Y]=<span class="built_in">meshgrid</span>(x,y);</span><br><span class="line">Z=X.*<span class="built_in">exp</span>(-X.^<span class="number">2</span>-Y.^<span class="number">2</span>);<span class="comment">%向量和矩阵运算最好用点乘</span></span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>); mesh(X,Y,Z);<span class="comment">% axis aquare会更漂亮，效果见下一个例子</span></span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>); surf(X,Y,Z);</span><br><span class="line"></span><br></pre></td></tr></table></figure> <img
+src="https://pic4.zhimg.com/80/v2-e51efe3aed6687688c7826d351948a30.jpg"
+alt="结果" /></p>
+<p><code>contour()</code><br />
+- projection of equal heights of 3D plot onto a 2D plane</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">-3.5</span>:<span class="number">0.2</span>:<span class="number">3.5</span>;</span><br><span class="line">y=<span class="number">-3.5</span>:<span class="number">0.2</span>:<span class="number">3.5</span>;</span><br><span class="line">[X,Y]=<span class="built_in">meshgrid</span>(x,y);</span><br><span class="line">Z=X.*<span class="built_in">exp</span>(-X.^<span class="number">2</span>-Y.^<span class="number">2</span>);</span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>); mesh(X,Y,Z);axis square;</span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>); contour(X,Y,Z);axis square;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-1c149392cc0048183309ae1ed14ac76b.jpg"
+alt="结果" />
+<figcaption aria-hidden="true">结果</figcaption>
+</figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">-3.5</span>:<span class="number">0.2</span>:<span class="number">3.5</span>;</span><br><span class="line">y=<span class="number">-3.5</span>:<span class="number">0.2</span>:<span class="number">3.5</span>;</span><br><span class="line">[X,Y]=<span class="built_in">meshgrid</span>(x,y);</span><br><span class="line">Z=X.*<span class="built_in">exp</span>(-X.^<span class="number">2</span>-Y.^<span class="number">2</span>);</span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">3</span>,<span class="number">1</span>); contour(Z,[<span class="number">-.45</span>:<span class="number">.05</span>:<span class="number">.45</span>]);axis square;</span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>); [C,h]=contour(Z);clabel(C,h); axis square;</span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">3</span>,<span class="number">3</span>);contourf(Z); axis square;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-035ef996345768dbf89d13c32813e6b9.jpg"
+alt="结果" />
+<figcaption aria-hidden="true">结果</figcaption>
+</figure>
+<p><code>meshc()</code>and<code>surfc()</code><br />
+- combination of surface/mesh and contours</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">-3.5</span>:<span class="number">0.2</span>:<span class="number">3.5</span>;</span><br><span class="line">y=<span class="number">-3.5</span>:<span class="number">0.2</span>:<span class="number">3.5</span>;</span><br><span class="line">[X,Y]=<span class="built_in">meshgrid</span>(x,y);</span><br><span class="line">Z=X.*<span class="built_in">exp</span>(-X.^<span class="number">2</span>-Y.^<span class="number">2</span>);</span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>); meshc(X,Y,Z);axis square;</span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>); surfc(X,Y,Z); axis square;</span><br></pre></td></tr></table></figure>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-9160e947cdf9b3dd1e0a7b83e0282384.jpg"
+alt="结果" />
+<figcaption aria-hidden="true">结果</figcaption>
+</figure>
+<p>view angle:<code>view()</code><br />
+- vary the view angle <code>view(-45,20)</code></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sphere(<span class="number">50</span>);</span><br><span class="line">shading flat;</span><br><span class="line">light(<span class="string">&#x27;Position&#x27;</span>,[<span class="number">1</span> <span class="number">3</span> <span class="number">2</span>]);</span><br><span class="line">light(<span class="string">&#x27;Position&#x27;</span>,[<span class="number">-3</span> <span class="number">-1</span> <span class="number">3</span>]);</span><br><span class="line">material shiny;</span><br><span class="line">axis vis3d off;</span><br><span class="line">set(gcf,<span class="string">&#x27;Color&#x27;</span>,[<span class="number">1</span> <span class="number">1</span> <span class="number">1</span>]);</span><br><span class="line">view(<span class="number">-45</span>,<span class="number">20</span>);观察的角度  </span><br></pre></td></tr></table></figure>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-3f22b9cc54358bc00ddba32ff5a29388.jpg"
+alt="结果" />
+<figcaption aria-hidden="true">结果</figcaption>
+</figure>
+<p>light:<code>light()</code>用于打光</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">clear;</span><br><span class="line">[X,Y,Z]=sphere(<span class="number">64</span>);</span><br><span class="line">h=surf(X,Y,Z);</span><br><span class="line">axis square Vis3d off;</span><br><span class="line">reds=<span class="built_in">zeros</span>(<span class="number">256</span>,<span class="number">3</span>); red(:, <span class="number">1</span>)=(<span class="number">0</span>:<span class="number">256.</span><span class="number">-1</span>)/<span class="number">255</span>;</span><br><span class="line">colormap(reds); shading interp; lighting phong;</span><br><span class="line">set(h,<span class="string">&#x27;AmbientStrength&#x27;</span>,<span class="number">0.75</span>,<span class="string">&#x27;DiffuseStrength&#x27;</span>,<span class="number">0.5</span>);</span><br><span class="line">L1=light(<span class="string">&#x27;Position&#x27;</span>,[<span class="number">-1</span> <span class="number">-1</span> <span class="number">-1</span>]);</span><br><span class="line">set(L1,<span class="string">&#x27;Position&#x27;</span>,[<span class="number">-1</span> <span class="number">-1</span> <span class="number">1</span>],<span class="string">&#x27;Color&#x27;</span>,<span class="string">&#x27;g&#x27;</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-afc5b0297a82da0022c71c45257081f5.jpg"
+alt="结果" />
+<figcaption aria-hidden="true">结果</figcaption>
+</figure>
+<p><code>patch()</code><br />
+- a graphical object containing polygons</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">v=[<span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;<span class="number">1</span> <span class="number">0</span> <span class="number">0</span>;<span class="number">1</span> <span class="number">1</span> <span class="number">0</span>;<span class="number">0</span> <span class="number">1</span> <span class="number">0</span>;<span class="number">0.25</span> <span class="number">0.25</span> <span class="number">1</span>;...</span><br><span class="line">    <span class="number">0.75</span> <span class="number">0.25</span> <span class="number">1</span>;<span class="number">0.75</span> <span class="number">0.75</span> <span class="number">1</span>;<span class="number">0.25</span> <span class="number">0.75</span> <span class="number">1</span>];</span><br><span class="line">f=[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span>;<span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span>;<span class="number">1</span> <span class="number">2</span> <span class="number">6</span> <span class="number">5</span>;<span class="number">2</span> <span class="number">3</span> <span class="number">7</span> <span class="number">6</span>;<span class="number">3</span> <span class="number">4</span> <span class="number">8</span> <span class="number">7</span>;<span class="number">4</span> <span class="number">1</span> <span class="number">5</span> <span class="number">8</span>];</span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>); patch(<span class="string">&#x27;Vertices&#x27;</span>,v,<span class="string">&#x27;Faces&#x27;</span>,f,...</span><br><span class="line">    <span class="string">&#x27;FaceVertexCData&#x27;</span>,hsv(<span class="number">6</span>),<span class="string">&#x27;FaceColor&#x27;</span>,<span class="string">&#x27;flat&#x27;</span>);</span><br><span class="line">view(<span class="number">3</span>); axis square tight;grid on;</span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>); patch(<span class="string">&#x27;Vertices&#x27;</span>,v,<span class="string">&#x27;Faces&#x27;</span>,f,...</span><br><span class="line">    <span class="string">&#x27;FaceVertexCData&#x27;</span>,hsv(<span class="number">8</span>),<span class="string">&#x27;FaceColor&#x27;</span>,<span class="string">&#x27;interp&#x27;</span>);</span><br><span class="line">view(<span class="number">3</span>); axis square tight;grid on;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-923a907a6fadb0bd3c54e8f98ccbca3e.jpg"
+alt="结果" />
+<figcaption aria-hidden="true">结果</figcaption>
+</figure>
+<p>professional</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">clear;</span><br><span class="line">load cape </span><br><span class="line">x=conv2(<span class="built_in">ones</span>(<span class="number">9</span>,<span class="number">9</span>)/<span class="number">81</span>,cumsum(cumsum(<span class="built_in">rand</span>(<span class="number">100</span>,<span class="number">100</span>)),<span class="number">2</span>));</span><br><span class="line">surf(X,<span class="string">&#x27;EdgeColor&#x27;</span>,<span class="string">&#x27;none&#x27;</span>,<span class="string">&#x27;EdgeLighting&#x27;</span>,<span class="string">&#x27;Phong&#x27;</span>,...</span><br><span class="line">    <span class="string">&#x27;FaceColor&#x27;</span>,<span class="string">&#x27;interp&#x27;</span>);</span><br><span class="line">solormap(map);caxis([<span class="number">-10</span>,<span class="number">300</span>]);<span class="comment">%我的显示好像不太正确</span></span><br><span class="line">grid off; axis off;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-1152ed07c228978c028f8cd4c2fbf191.jpg"
+alt="pro" />
+<figcaption aria-hidden="true">pro</figcaption>
+</figure>
 
     </div>
 
