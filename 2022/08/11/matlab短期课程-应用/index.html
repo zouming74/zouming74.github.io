@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.12.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="介绍 这仍是接着matlab短期课程的内容，但是更多的关注点在应用层面。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="matlab短期课程--应用">
+<meta property="og:url" content="http://example.com/2022/08/11/matlab%E7%9F%AD%E6%9C%9F%E8%AF%BE%E7%A8%8B-%E5%BA%94%E7%94%A8/index.html">
+<meta property="og:site_name" content="Leonardo的书房">
+<meta property="og:description" content="介绍 这仍是接着matlab短期课程的内容，但是更多的关注点在应用层面。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-08-11T00:59:56.000Z">
+<meta property="article:modified_time" content="2022-08-11T08:32:10.851Z">
+<meta property="article:author" content="邹铭">
+<meta property="article:tag" content="matlab">
+<meta property="article:tag" content="数学建模">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2022/08/11/matlab%E7%9F%AD%E6%9C%9F%E8%AF%BE%E7%A8%8B-%E5%BA%94%E7%94%A8/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/08/11/matlab%E7%9F%AD%E6%9C%9F%E8%AF%BE%E7%A8%8B-%E5%BA%94%E7%94%A8/","path":"2022/08/11/matlab短期课程-应用/","title":"matlab短期课程--应用"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>matlab短期课程--应用 | Leonardo的书房</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Leonardo的书房</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%80%BC%E5%BE%AE%E7%A7%AF%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">数值微积分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#polynomial-differentiation-and-integration"><span class="nav-number">2.1.</span> <span class="nav-text">polynomial
+differentiation and integration</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#differentiation"><span class="nav-number">2.1.1.</span> <span class="nav-text">differentiation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#polynomial-differentiation"><span class="nav-number">2.1.2.</span> <span class="nav-text">polynomial differentiation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#polynomial-integration"><span class="nav-number">2.1.3.</span> <span class="nav-text">polynomial integration</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#numerical-differentiation-and-integration"><span class="nav-number">2.2.</span> <span class="nav-text">numerical
+differentiation and integration</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#numerical-differentiation"><span class="nav-number">2.2.1.</span> <span class="nav-text">numerical differentiation</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#second-and-third-derivatives"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">Second and Third Derivatives</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#numerical-integration"><span class="nav-number">2.2.2.</span> <span class="nav-text">numerical integration</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#numerical-quadrature-rules"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">Numerical Quadrature Rules</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#second-order-rulefrac13simpson"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">Second-order Rule:\(\frac{1}{3}\)Simpson</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#comparison"><span class="nav-number">2.2.2.3.</span> <span class="nav-text">Comparison</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#review-of-function-handles"><span class="nav-number">2.2.2.4.</span> <span class="nav-text">Review of Function
+Handles(@)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#numerical-integrationintegral"><span class="nav-number">2.2.2.5.</span> <span class="nav-text">numerical
+integration:integral()</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">邹铭</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/11/matlab%E7%9F%AD%E6%9C%9F%E8%AF%BE%E7%A8%8B-%E5%BA%94%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="邹铭">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Leonardo的书房">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="matlab短期课程--应用 | Leonardo的书房">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          matlab短期课程--应用
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-08-11 08:59:56 / 修改时间：16:32:10" itemprop="dateCreated datePublished" datetime="2022-08-11T08:59:56+08:00">2022-08-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="介绍">介绍</h2>
+<p>这仍是接着matlab短期课程的内容，但是更多的关注点在应用层面。</p>
+<span id="more"></span>
+<h2 id="数值微积分">数值微积分</h2>
+<h3 id="polynomial-differentiation-and-integration">polynomial
+differentiation and integration</h3>
+<h4 id="differentiation">differentiation</h4>
+<ul>
+<li>The derivative of a function <span
+class="math inline">\(f(x)\)</span> is written as <span
+class="math display">\[f&#39;(x) \qquad \frac{df(x)}{dx}\]</span></li>
+<li>The rate of the change in the function <span
+class="math inline">\(f(x)\)</span> with respect to x</li>
+<li>Geometrically,<span class="math inline">\(f&#39;(x)\)</span>
+represents the coefficient of the line tangent to the curve in the point
+<span class="math inline">\(x_0\)</span></li>
+</ul>
+<h4 id="polynomial-differentiation">polynomial differentiation</h4>
+<ul>
+<li>Polynomials are often used in numerical calculations<br />
+</li>
+<li>For a polynomial <span
+class="math display">\[f(x)=a_nx^n+a_{n-1}x^{n-1}+ \dots
+a_1x+a_0\]</span></li>
+<li>The derivative is <span
+class="math display">\[f&#39;(x)=a_nnx^{n-1}+a_{n-1}(n-1)x^{n-2}+ \dots
++a_1\]</span></li>
+</ul>
+<p>Representing Polynomials in MATLAB - Polynomials were represented as
+row vectors - For example,consider the equation <span
+class="math display">\[f(x)=x^3-2x-5\]</span> - To enter this polynomial
+into MATLAB ,use<code>p=[1 0 -2 -5]</code>一定要有常数项的数值</p>
+<p>Values of Polynomials:<code>ployval()</code><br />
+- polt the polynomial:<span class="math display">\[9x^3-5x^2+3x+7 \qquad
+for -2 \le x \le 5\]</span></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a=[<span class="number">9</span>,<span class="number">-5</span>,<span class="number">3</span>,<span class="number">7</span>];</span><br><span class="line">x=<span class="number">-2</span>:<span class="number">0.01</span>:<span class="number">5</span>;</span><br><span class="line">f=polyval(a,x);</span><br><span class="line"><span class="built_in">plot</span>(x,f,<span class="string">&#x27;LineWidth&#x27;</span>,<span class="number">2</span>);</span><br><span class="line">xlabel(<span class="string">&#x27;x&#x27;</span>); ylabel(<span class="string">&#x27;f(x)&#x27;</span>);</span><br><span class="line">set(gca,<span class="string">&#x27;FontSize&#x27;</span>,<span class="number">14</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-7912133b675cb0081171ca4963232aba.jpg"
+alt="结果" />
+<figcaption aria-hidden="true">结果</figcaption>
+</figure>
+<p>Polynomial Differentiation:<code>polyder()</code></p>
+<ul>
+<li>Given <span class="math inline">\(f(x)=5x^4-2x^2+1\)</span>
+<code>p=[5 0 -2 0 1]</code> <code>polyder(p)</code>将求得<span
+class="math inline">\(f&#39;(x)\)</span><br />
+</li>
+<li>The value of <span class="math inline">\(f&#39;(7)\)</span><br />
+<code>polyval(polyder(p),7)</code><br />
+</li>
+<li><code>conv()</code>可以对多项式进行乘法运算</li>
+</ul>
+<h4 id="polynomial-integration">polynomial integration</h4>
+<ul>
+<li>For a polynomial <span
+class="math display">\[f(x)=a_nx^n+a_{n-1}x^{n-1}+ \dots
+a_1x+a_0\]</span><br />
+</li>
+<li>The integration is <span class="math display">\[\int
+f(x)dx=\frac{1}{n+1}a_nx^{n+1}+\frac{1}{n}a_{n-1}x^n+\dots+a_0x+k\]</span>
+k值是需要提供给matlab的</li>
+</ul>
+<p>Polynomial Integration:<code>polyint()</code></p>
+<ul>
+<li>Given <span class="math display">\[f(x)=5x^4-2x^2+1\]</span><br />
+<code>P=[5 0 -2 0 1]</code>
+<code>polyint(P,3)</code>需要给定最后的k值，这里的k是3<br />
+</li>
+<li>The value of <span class="math inline">\(\int f(7) dx\)</span><br />
+<code>polyval(polyint(P,3),7)</code></li>
+</ul>
+<h3 id="numerical-differentiation-and-integration">numerical
+differentiation and integration</h3>
+<h4 id="numerical-differentiation">numerical differentiation</h4>
+<ul>
+<li>The simplest method: finite difference approximation</li>
+<li>Calculating a secant(割线) line in the vicinity of <span
+class="math inline">\(x_0\)</span> <span
+class="math display">\[f&#39;(x_0)=\lim_{h\rightarrow
+0}\frac{f(x_0+h)-f(x_0)}{h}\]</span><br />
+where <span class="math inline">\(h\)</span> represents a small change
+in <span class="math inline">\(x\)</span></li>
+</ul>
+<p>Differences:<code>diff()</code></p>
+<ul>
+<li><p><code>diff()</code> calculates the differences between
+adjacent(临近的) elements of a vector<br />
+<code>x=[1 2 5 2 1];</code> <code>diff(x);</code>返回值内有4个</p></li>
+<li><p>Obtain the slope of a line between a points (1,5) and (2,7)
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; x=[<span class="number">1</span> <span class="number">2</span>];</span><br><span class="line">&gt;&gt; y=[<span class="number">5</span>,<span class="number">7</span>];</span><br><span class="line">&gt;&gt; slope=diff(y)./diff(x)</span><br><span class="line"></span><br><span class="line">slope =</span><br><span class="line"></span><br><span class="line">     <span class="number">2</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<p>Numerical Differentiation Using <code>diff()</code></p>
+<ul>
+<li>Given <span class="math inline">\(f(x)=\sin(x)\)</span>,find <span
+class="math inline">\(f&#39;(x_0) \qquad x_0=\pi/2\qquad\)</span>using
+<span class="math inline">\(h=0.1\)</span></li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x0=<span class="built_in">pi</span>/<span class="number">2</span>;</span><br><span class="line">h=<span class="number">0.1</span>;</span><br><span class="line">x=[x0 x0+h];</span><br><span class="line">y=[<span class="built_in">sin</span>(x0) <span class="built_in">sin</span>(x0+h)];</span><br><span class="line">m=diff(y)./diff(x)</span><br><span class="line"></span><br><span class="line">m =</span><br><span class="line"></span><br><span class="line">   <span class="number">-0.0500</span></span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+<p>How to Find the <span class="math inline">\(f&#39;\)</span> over An
+Interval <span class="math inline">\([0,2\pi]\)</span></p>
+<ul>
+<li>In the previous example,<span
+class="math inline">\(x_0=\pi/2\)</span></li>
+<li>Strategy:
+<ul>
+<li>Create an array in the interval <span
+class="math inline">\([0,2\pi]\)</span></li>
+<li>The step is the <span class="math inline">\(h\)</span></li>
+<li>Calculate the <span class="math inline">\(f&#39;\)</span> at these
+points</li>
+</ul></li>
+<li>For example,<br />
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clear;</span><br><span class="line">h=<span class="number">0.5</span>;x=<span class="number">0</span>:h:<span class="number">2</span>*<span class="built_in">pi</span>;</span><br><span class="line">y=<span class="built_in">sin</span>(x);</span><br><span class="line">m=diff(y)./diff(x)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>Various Step Size</p>
+<ul>
+<li>The derivatives of <span class="math inline">\(f(x)=\sin(x)\)</span>
+calculated using various <span class="math inline">\(h\)</span>
+values</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">g=colormap(lines);<span class="built_in">hold</span> on;</span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="number">4</span></span><br><span class="line">    x=<span class="number">0</span>:power(<span class="number">10</span>,-<span class="built_in">i</span>):<span class="built_in">pi</span>;</span><br><span class="line">    y=<span class="built_in">sin</span>(x); m=diff(y)./diff(x) ;</span><br><span class="line">    <span class="built_in">plot</span>(x(<span class="number">1</span>:<span class="keyword">end</span><span class="number">-1</span>),m,<span class="string">&#x27;Color&#x27;</span>,g(<span class="built_in">i</span>,:));</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="built_in">hold</span> off;</span><br><span class="line">set(gca,<span class="string">&#x27;XLim&#x27;</span>,[<span class="number">0</span>,<span class="built_in">pi</span>/<span class="number">2</span>]); set(gca,<span class="string">&#x27;YLim&#x27;</span>,[<span class="number">0</span>,<span class="number">1.2</span>]);</span><br><span class="line">set(gca,<span class="string">&#x27;FontSize&#x27;</span>,<span class="number">18</span>); set(gca,<span class="string">&#x27;YLim&#x27;</span>,[<span class="number">0</span>,<span class="number">1.2</span>]);</span><br><span class="line">set(gca,<span class="string">&#x27;XTick&#x27;</span>,<span class="number">0</span>:<span class="built_in">pi</span>/<span class="number">4</span>:<span class="built_in">pi</span>/<span class="number">2</span>);</span><br><span class="line">set(gca,<span class="string">&#x27;XTickLabel&#x27;</span>,&#123;<span class="string">&#x27;0&#x27;</span>,<span class="string">&#x27;p/4&#x27;</span>,<span class="string">&#x27;p/2&#x27;</span>&#125;);</span><br><span class="line">h=<span class="built_in">legend</span>(<span class="string">&#x27;h=0.1&#x27;</span>,<span class="string">&#x27;h=0.01&#x27;</span>,<span class="string">&#x27;h=0.001&#x27;</span>,<span class="string">&#x27;h=0.0001&#x27;</span>);</span><br><span class="line">set(h,<span class="string">&#x27;FontName&#x27;</span>,<span class="string">&#x27;Times New Roman&#x27;</span>);box on;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-9e797771ac09bb63cead9c9826e1a6ca.jpg"
+alt="结果" />
+<figcaption aria-hidden="true">结果</figcaption>
+</figure>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-41e457d6a3022811f7f77da068d09385.jpg"
+alt="局部细节" />
+<figcaption aria-hidden="true">局部细节</figcaption>
+</figure>
+<p><strong>Exercise:</strong></p>
+<ul>
+<li>Given <span
+class="math inline">\(f(x)=e^{-x}\sin(x^2)/2\)</span>,plot the
+approximate derivatives <span class="math inline">\(f&#39;\)</span> of
+<span class="math inline">\(h=0.1\quad 0.01 \quad 0.001\)</span></li>
+</ul>
+<h5 id="second-and-third-derivatives">Second and Third Derivatives</h5>
+<ul>
+<li>The second derivatives <span
+class="math inline">\(f&#39;&#39;\)</span> and third derivative <span
+class="math inline">\(f&#39;&#39;&#39;\)</span> can be obtained using
+similar approaches<br />
+</li>
+<li>Given <span class="math inline">\(f(x)=x^3\)</span>,plot <span
+class="math inline">\(f&#39;\)</span> and <span
+class="math inline">\(f&#39; for -2 \le x \le 2\)</span></li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">-2</span>:<span class="number">0.005</span>:<span class="number">2</span>; y=x.^<span class="number">3</span>;</span><br><span class="line">m=diff(y)./diff(x);</span><br><span class="line">m2=diff(m)./diff(x(<span class="number">1</span>:<span class="keyword">end</span><span class="number">-1</span>));</span><br><span class="line"></span><br><span class="line"><span class="built_in">plot</span>(x,y,x(<span class="number">1</span>:<span class="keyword">end</span><span class="number">-1</span>),m,x(<span class="number">1</span>:<span class="keyword">end</span><span class="number">-2</span>),m2);</span><br><span class="line">xlabel(<span class="string">&#x27;x&#x27;</span>,<span class="string">&#x27;FontSize&#x27;</span>,<span class="number">18</span>);</span><br><span class="line">ylabel(<span class="string">&#x27;y&#x27;</span>,<span class="string">&#x27;FontSize&#x27;</span>,<span class="number">18</span>);</span><br><span class="line"><span class="built_in">legend</span>(<span class="string">&#x27;f(x)=x^3&#x27;</span>,<span class="string">&#x27;f&#x27;&#x27;(x)&#x27;</span>,<span class="string">&#x27;f&#x27;&#x27;&#x27;&#x27;(x)&#x27;</span>);</span><br><span class="line"></span><br><span class="line">set(gca,<span class="string">&#x27;FontSize&#x27;</span>,<span class="number">18</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-8938fb6d3c5935a7f75c49aa780f1be8.jpg"
+alt="结果" />
+<figcaption aria-hidden="true">结果</figcaption>
+</figure>
+<h4 id="numerical-integration">numerical integration</h4>
+<ul>
+<li>Calculating the numerical value of a definite integral <span
+class="math display">\[s=\int_a^bf(x)dx \approx
+\sum_{i=0}^nf(x_i)\int_a^bL_i(x)dx \]</span><br />
+</li>
+<li>Quadrature(求积分) method approximating the integral by using a
+finite set of points</li>
+</ul>
+<h5 id="numerical-quadrature-rules">Numerical Quadrature Rules</h5>
+<ul>
+<li>Basic quadrature rules
+<ol type="1">
+<li>Midpoint rule(zeroth-order approximation) 矩形预测</li>
+<li>Trapezoid rule(first-order approximation) 梯形预测</li>
+</ol></li>
+</ul>
+<p>Midpoint Rule <span class="math display">\[\int_{x_0}^{x_3}f(x)dx
+\approx hf_0+hf_1+hf_2=h\sum_{i=0}^{n-1}f_i\]</span></p>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-6c4b202c86aa2a1f53e50f6f881192c7.jpg"
+alt="Midpoint Rule" />
+<figcaption aria-hidden="true">Midpoint Rule</figcaption>
+</figure>
+<p>Midpoint Rule Using <code>sum()</code></p>
+<ul>
+<li>Example <span
+class="math display">\[A=\int_0^24x^3dx=16\]</span></li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">h=<span class="number">0.05</span>;  x=<span class="number">0</span>:h:<span class="number">2</span>;</span><br><span class="line">midpoint = (x(<span class="number">1</span>:<span class="keyword">end</span><span class="number">-1</span>)+x(<span class="number">2</span>:<span class="keyword">end</span>))./<span class="number">2</span>;</span><br><span class="line">y=<span class="number">4</span>*midpoint.^<span class="number">3</span>;</span><br><span class="line">s=sum(h*y)</span><br><span class="line"></span><br><span class="line">s =</span><br><span class="line"></span><br><span class="line">   <span class="number">15.9950</span></span><br><span class="line"><span class="comment">%准确度较高</span></span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+<p>Trapezoid Rule<br />
+<span class="math display">\[\int_{x_0}^{x_3}f(x)dx \approx
+h\frac{f_0+f_1}{2}+h\frac{f_1+f_2}{2}+h\frac{f_2+f_3}{2}\]</span></p>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-582139cba6f428c745fe67b0392a8f76.jpg"
+alt="Trapezoid Rule" />
+<figcaption aria-hidden="true">Trapezoid Rule</figcaption>
+</figure>
+<p>Trapezoid Rule Using <code>trapz()</code></p>
+<ul>
+<li>Example <span
+class="math display">\[A=\int_0^24x^3dx=16\]</span><br />
+</li>
+<li>Alternative:<code>trapezoid=(y(1:end-1)+y(2:end))/2;</code></li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">h=<span class="number">0.05</span>;  x=<span class="number">0</span>:h:<span class="number">2</span>;</span><br><span class="line">y=<span class="number">4</span>*x.^<span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">s=h*trapz(y)</span><br><span class="line"></span><br><span class="line"><span class="comment">%需要知道y的值</span></span><br><span class="line"></span><br><span class="line">s =</span><br><span class="line"></span><br><span class="line">   <span class="number">16.0100</span></span><br></pre></td></tr></table></figure>
+<h5 id="second-order-rulefrac13simpson">Second-order Rule:<span
+class="math inline">\(\frac{1}{3}\)</span>Simpson</h5>
+<p><span class="math display">\[\int_{x_0}^{x_2}f(x)dx \approx
+\frac{h}{3}(f_0+4f_1+f_2)\]</span></p>
+<p><img
+src="https://pic4.zhimg.com/80/v2-4ede9f5704af551c705c245d4267bf63.jpg"
+alt="simpson&#39;s rule" /> Simpson's Rule</p>
+<ul>
+<li>Example<br />
+<span class="math display">\[A=\int_0^24x^3dx=16\]</span></li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">h=<span class="number">0.05</span>;  x=<span class="number">0</span>:h:<span class="number">2</span>;</span><br><span class="line">y=<span class="number">4</span>*x.^<span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">s=h/<span class="number">3</span>*(y(<span class="number">1</span>)+<span class="number">2</span>*sum(y(<span class="number">3</span>:<span class="number">2</span>:<span class="keyword">end</span><span class="number">-2</span>))+...</span><br><span class="line">    <span class="number">4</span>*sum(y(<span class="number">2</span>:<span class="number">2</span>:<span class="keyword">end</span>))+y(<span class="keyword">end</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">s =</span><br><span class="line"></span><br><span class="line">    <span class="number">16</span><span class="comment">%精度为3，所以这里计算得到的是一个准确值</span></span><br></pre></td></tr></table></figure>
+<h5 id="comparison">Comparison</h5>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-3c99ad16914d37476fbbec5a4bfde772.jpg"
+alt="对比" />
+<figcaption aria-hidden="true">对比</figcaption>
+</figure>
+<h5 id="review-of-function-handles">Review of Function
+Handles(<code>@</code>)</h5>
+<ul>
+<li>A handle is a pointer to a function</li>
+<li>Can be used to pass functions to other functions 将函数传输给defined
+function<br />
+</li>
+<li>For example,the <code>input()</code> of the following function is
+another function: <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[y]</span>=<span class="title">xy_plot</span><span class="params">(intput,x)</span></span></span><br><span class="line">y=input(x);  <span class="built_in">plot</span>(x,y,<span class="string">&#x27;r--&#x27;</span>);</span><br><span class="line">xlabel(<span class="string">&#x27;x&#x27;</span>);  ylabel(<span class="string">&#x27;function(x)&#x27;</span>);</span><br><span class="line"><span class="keyword">end</span>  </span><br><span class="line"></span><br><span class="line">&gt;&gt; xy_plot(<span class="built_in">sin</span>,<span class="number">0</span>:<span class="number">0.01</span>:<span class="number">2</span>*<span class="built_in">pi</span>)</span><br><span class="line">错误使用 <span class="built_in">sin</span></span><br><span class="line">输入参数的数目不足。</span><br><span class="line"></span><br><span class="line">&gt;&gt; xy_plot(@<span class="built_in">sin</span>,<span class="number">0</span>:<span class="number">0.01</span>:<span class="number">2</span>*<span class="built_in">pi</span>)<span class="comment">%必须是@，告诉函数这是一个函数</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">  列 <span class="number">1</span> 至 <span class="number">11.</span>..</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="numerical-integrationintegral">numerical
+integration:<code>integral()</code></h5>
+<ul>
+<li>Numerical integration on a function from using global adaptive
+quadrature and default error tolerances</li>
+<li>Example<br />
+<span class="math display">\[\int_0^2\frac{1}{x^3-2x-5}dx\]</span><br />
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; y=@(x) <span class="number">1.</span>/(x.^<span class="number">3</span><span class="number">-2</span>*x<span class="number">-5</span>);</span><br><span class="line">&gt;&gt; integral(y,<span class="number">0</span>,<span class="number">2</span>)<span class="comment">%integral 第一个参数必须是matlab的函数,而非表达式</span></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">   <span class="number">-0.4605</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>Double and Triple Integrals</p>
+<ul>
+<li>Example <span class="math display">\[f(x,y)=\int_0^{\pi}\int_0^1(y
+\cdot \sin(x)+x\cdot cos(y))dxdy\]</span></li>
+<li>Example <span
+class="math display">\[f(x,y,z)=\int_{-1}^{1}\int_0^{\pi}\int_0^1(y
+\cdot \sin(x)+z\cdot cos(y))dxdydz\]</span></li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">f=@(x,y) y.*<span class="built_in">sin</span>(x)+x.*<span class="built_in">cos</span>(y);</span><br><span class="line">integral2(f,<span class="built_in">pi</span>,<span class="number">2</span>*<span class="built_in">pi</span>,<span class="number">0</span>,<span class="built_in">pi</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">   <span class="number">-9.8696</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">f=@(x,y,z) y.*<span class="built_in">sin</span>(x)+z.*<span class="built_in">cos</span>(y);</span><br><span class="line">integral3(f,<span class="number">0</span>,<span class="built_in">pi</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">-1</span>,<span class="number">1</span>)  </span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">    <span class="number">2.0000</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/matlab/" rel="tag"># matlab</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" rel="tag"># 数学建模</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/08/01/matlab%E7%9F%AD%E6%9C%9F%E8%AF%BE%E7%A8%8B/" rel="prev" title="matlab短期课程--基础">
+                  <i class="fa fa-chevron-left"></i> matlab短期课程--基础
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">邹铭</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
