@@ -29,7 +29,7 @@
 <meta property="og:description" content="介绍 这仍是接着matlab短期课程的内容，但是更多的关注点在应用层面。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-11T00:59:56.000Z">
-<meta property="article:modified_time" content="2022-08-14T08:07:09.508Z">
+<meta property="article:modified_time" content="2022-08-14T13:18:53.243Z">
 <meta property="article:author" content="邹铭">
 <meta property="article:tag" content="matlab">
 <meta property="article:tag" content="数学建模">
@@ -126,7 +126,8 @@ integration:integral()</span></a></li></ol></li></ol></li></ol></li><li class="n
 approach</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#symbolic-root-findingsolve"><span class="nav-number">3.1.2.</span> <span class="nav-text">symbolic root
 finding:solve()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#symbolic-differentiationdiff"><span class="nav-number">3.1.3.</span> <span class="nav-text">symbolic
 differentiation:diff()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#symbolic-integrationint"><span class="nav-number">3.1.4.</span> <span class="nav-text">symbolic
-integration:int()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#numeric-root-solvers"><span class="nav-number">3.2.</span> <span class="nav-text">numeric root solvers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#recursive-function"><span class="nav-number">3.3.</span> <span class="nav-text">recursive function</span></a></li></ol></li></ol></div>
+integration:int()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#numeric-root-solvers"><span class="nav-number">3.2.</span> <span class="nav-text">numeric root solvers</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#review-of-function-handles-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">review of function handles(@)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#how-do-these-solvers-find-the-roots"><span class="nav-number">3.2.2.</span> <span class="nav-text">How Do These Solvers Find
+the Roots?</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#recursive-function%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0"><span class="nav-number">3.3.</span> <span class="nav-text">recursive function(递归函数)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#factorial-recursive-function"><span class="nav-number">3.3.1.</span> <span class="nav-text">factorial recursive function</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -226,7 +227,7 @@ integration:int()</span></a></li></ol></li><li class="nav-item nav-level-3"><a c
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-14 16:07:09" itemprop="dateModified" datetime="2022-08-14T16:07:09+08:00">2022-08-14</time>
+      <time title="修改时间：2022-08-14 21:18:53" itemprop="dateModified" datetime="2022-08-14T21:18:53+08:00">2022-08-14</time>
     </span>
 
   
@@ -534,26 +535,35 @@ x+y=6 \\
 \end{cases}
 \]</span></p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">syms x y;</span><br><span class="line">eq1 = x<span class="number">-2</span>*y<span class="number">-5</span>;</span><br><span class="line">eq2 = x+y<span class="number">-6</span>;</span><br><span class="line">A=solve(eq1,eq2,x,y)</span><br><span class="line"></span><br><span class="line">A = </span><br><span class="line"></span><br><span class="line">  包含以下字段的 struct:</span><br><span class="line"></span><br><span class="line">    x: <span class="number">17</span>/<span class="number">3</span></span><br><span class="line">    y: <span class="number">1</span>/<span class="number">3</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>Solving Equations Expressed in Symbols<br />
-- What if we are given a function expressed in symbols?<br />
-- <span class="math display">\[ax^2-b=0\]</span><br />
-- <code>syms ax a b</code> <code>solve(a*x^2-b)</code><br />
-- <span class="math inline">\(x\)</span> is always the first choice to
+<p>Solving Equations Expressed in Symbols</p>
+<ul>
+<li>What if we are given a function expressed in symbols?<br />
+</li>
+<li><span class="math display">\[ax^2-b=0\]</span><br />
+</li>
+<li><code>syms ax a b</code> <code>solve(a*x^2-b)</code><br />
+</li>
+<li><span class="math inline">\(x\)</span> is always the first choice to
 be solved<br />
-- What if one wants th express <span class="math inline">\(b\)</span> in
-terms of <span class="math inline">\(a\)</span> and <span
-class="math inline">\(x\)</span> ? -
-<code>solve(a*x^2-b,b)</code>将<span
-class="math inline">\(b\)</span>设置为未知数</p>
-<p><strong>Exercise:</strong><br />
-- Solve this equation for <span class="math inline">\(x\)</span> using
+</li>
+<li>What if one wants th express <span class="math inline">\(b\)</span>
+in terms of <span class="math inline">\(a\)</span> and <span
+class="math inline">\(x\)</span> ?</li>
+<li><code>solve(a*x^2-b,b)</code>将<span
+class="math inline">\(b\)</span>设置为未知数</li>
+</ul>
+<p><strong>Exercise:</strong></p>
+<ul>
+<li>Solve this equation for <span class="math inline">\(x\)</span> using
 symbolic approach <span
 class="math display">\[(x-a)^2+(y-b)^2=r^2\]</span><br />
-- Find the matrix inverse using symbolic approach <span
+</li>
+<li>Find the matrix inverse using symbolic approach <span
 class="math display">\[\begin{bmatrix}
-    a&amp;b \\
-    c&amp;d\\
-\end{bmatrix}\]</span></p>
+  a&amp;b \\
+  c&amp;d\\
+\end{bmatrix}\]</span></li>
+</ul>
 <h4 id="symbolic-differentiationdiff">symbolic
 differentiation:<code>diff()</code></h4>
 <ul>
@@ -605,7 +615,160 @@ understanding</td>
 </tbody>
 </table>
 <h3 id="numeric-root-solvers">numeric root solvers</h3>
-<h3 id="recursive-function">recursive function</h3>
+<h4 id="review-of-function-handles-1">review of function handles(@)</h4>
+<ul>
+<li>A handle is a pointer to a function<br />
+</li>
+<li>Can be used to pass function to other functions<br />
+</li>
+<li>For example,the<code>input</code> of the following function is
+another function: <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[y]</span>=<span class="title">xy_plot</span><span class="params">(input,x)</span></span></span><br><span class="line"></span><br><span class="line">y=input(x);  <span class="built_in">plot</span>(x,y,<span class="string">&#x27;r--&#x27;</span>);</span><br><span class="line">xlabel(<span class="string">&#x27;x&#x27;</span>); ylabel(<span class="string">&#x27;function(x)&#x27;</span>)</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><code>fsolve()</code></p>
+<ul>
+<li>A numeric root solver<br />
+</li>
+<li>For example,solve this equation:<span
+class="math display">\[f(x)=1.2x+0.3+sin(x)\]</span>
+<code>f2=@(x)(1.2*x+0.3+x*sin(x));</code><br />
+<code>fsolve(f2,0)</code>f2 是 a function handle ,0 是initial guess</li>
+</ul>
+<p><strong>Exercise:</strong></p>
+<ul>
+<li>Find the root for this equation:<span
+class="math display">\[f(x,y)=\begin{cases}
+2x-y-e^{-x} \\
+-x+2y-e^{-y} \\
+\end{cases}\]</span> using initial value(初值)(x,y)=(-5,-5)</li>
+</ul>
+<p><code>fzero()</code></p>
+<ul>
+<li>Another numeric root solver</li>
+<li>Find the zero if and only if the function cross the x-axis<br />
+</li>
+<li><code>f=@(x)x.^2</code>
+<ul>
+<li><code>fzero(f,0.1)</code>结果显示无穷小 ，0.1附近的零点</li>
+<li><code>fsolve(f,0)</code>结果显示为0</li>
+<li>Options:
+<code>options=optimset('MaxIter',1e3,'TolFun',1e-10);</code>1e3 is
+number of iterations 1e-10 is Tolerance
+<code>fzero(f,0.1,options)</code></li>
+</ul></li>
+</ul>
+<p>Finding Roots of Polynomials:<code>roots()</code></p>
+<ul>
+<li>Find the roots of this polynomial: <span
+class="math display">\[f(x)=x^5-3.5x^4+2.75x^3+2.125x^2-3.875x+1.25\]</span><br />
+</li>
+<li><code>roots([1 -3.5 2.75 2.125 -3.875 1.25])</code></li>
+<li><code>roots</code>only works for polynomials,有时会得到复数解</li>
+</ul>
+<h4 id="how-do-these-solvers-find-the-roots">How Do These Solvers Find
+the Roots?</h4>
+<ul>
+<li>Now we are going to introduce more details of some numeric
+methods</li>
+</ul>
+<p>Numeric Root Finding Methods</p>
+<ul>
+<li>Two major types:
+<ul>
+<li>Bracketing methods (e.g.,bisection method) start with an interval
+that contains the root</li>
+<li>Open methods(e.g., Newton-Raphson method) start with one or more
+initial guess point</li>
+</ul></li>
+<li>Roots are found iteratively until some criteria are satisfied:
+<ul>
+<li>Accuracy</li>
+<li>Number of iteration(迭代)</li>
+</ul></li>
+</ul>
+<p>Bisection Method(Bracketing,二分法)</p>
+<ul>
+<li>Assumptions:
+<ul>
+<li><span class="math inline">\(f(x)\)</span> contains on <span
+class="math inline">\([l,u]\)</span></li>
+<li><span class="math inline">\(f(l) \cdot f(u) \lt 0\)</span></li>
+</ul></li>
+<li>Algorithm:
+<ol type="1">
+<li><span class="math inline">\(r \rightarrow (l+u)/2\)</span></li>
+<li>if <span class="math inline">\(f(r) \cdot f(u) \lt 0\)</span>,then
+new interval <span class="math inline">\([r,u]\)</span>;if <span
+class="math inline">\(f(l) \cdot f(u) \lt 0\)</span>,then new interval
+<span class="math inline">\([l,r]\)</span>.</li>
+<li>Loop 2 End</li>
+</ol></li>
+</ul>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-ed0a791c836ff1905dd000c39b36898c.jpg"
+alt="Bisection" />
+<figcaption aria-hidden="true">Bisection</figcaption>
+</figure>
+<p>Newton-Raphson Method(Open)</p>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-0ef9b938c7b1d0e8e3e3fe4626ccb05b.jpg"
+alt="细节解释" />
+<figcaption aria-hidden="true">细节解释</figcaption>
+</figure>
+<ul>
+<li>Assumption:
+<ul>
+<li><span class="math inline">\(f(x)\)</span> continuous</li>
+<li><span class="math inline">\(f&#39;(x)\)</span> known</li>
+</ul></li>
+<li>Algorithm:
+<ul>
+<li>Loop<span
+class="math display">\[x_{n+1}=x_{n}-\frac{f(x_n)}{f&#39;(x_n)}\]</span>End</li>
+</ul></li>
+</ul>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-5203bedc97511a647ab12c1e13e7abb7.jpg"
+alt="Newton" />
+<figcaption aria-hidden="true">Newton</figcaption>
+</figure>
+<p>Bisection vs Newton-Raphson</p>
+<ul>
+<li>Bisection:
+<ul>
+<li>Reliable</li>
+<li>No konwledge of derivative is need</li>
+<li>Slow</li>
+<li>One function evaluation per iteration</li>
+<li>Needs an interval <span class="math inline">\([a,b]\)</span>
+containing the root <span class="math inline">\(f(a)\cdot f(b) \lt
+0\)</span></li>
+</ul></li>
+<li>Netwon:
+<ul>
+<li>Fast but may diverge</li>
+<li>Needs derivatives and an initial guess <span
+class="math inline">\(x_0\)</span>,f'(x_0) is nonzero</li>
+</ul></li>
+</ul>
+<h3 id="recursive-function递归函数">recursive function(递归函数)</h3>
+<ul>
+<li>Function that call themselves<br />
+</li>
+<li>Example,factorial of an integer <span
+class="math inline">\(n\)</span> <span class="math display">\[n!=1
+\times 2 \times 3 \cdots \times n\]</span></li>
+<li>A factorial can be defined in terms of another factorial:<span
+class="math inline">\(n!=n \times (n-1)!\)</span></li>
+</ul>
+<h4 id="factorial-recursive-function">factorial recursive function</h4>
+<ul>
+<li>The function includes a recursive cases and a base case</li>
+<li>The function stops when it reaches the base case<br />
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">output</span> = <span class="title">fact</span><span class="params">(n)</span></span></span><br><span class="line"><span class="keyword">if</span> n==<span class="number">1</span></span><br><span class="line">    output=<span class="number">1</span>;<span class="comment">% Base case</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">output =n*fact(n<span class="number">-1</span>);<span class="comment">%Recursive case </span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></li>
+</ul>
 
     </div>
 
