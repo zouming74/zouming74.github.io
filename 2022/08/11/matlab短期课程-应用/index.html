@@ -29,7 +29,7 @@
 <meta property="og:description" content="课程介绍 这仍是接着matlab短期课程的内容，但是更多的关注点在应用层面。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-11T00:59:56.000Z">
-<meta property="article:modified_time" content="2022-08-16T09:32:16.484Z">
+<meta property="article:modified_time" content="2022-08-17T13:33:29.437Z">
 <meta property="article:author" content="邹铭">
 <meta property="article:tag" content="matlab">
 <meta property="article:tag" content="数学建模">
@@ -129,7 +129,9 @@ differentiation:diff()</span></a></li><li class="nav-item nav-level-4"><a class=
 integration:int()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#numeric-root-solvers"><span class="nav-number">3.2.</span> <span class="nav-text">numeric root solvers</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#review-of-function-handles-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">review of function handles(@)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#how-do-these-solvers-find-the-roots"><span class="nav-number">3.2.2.</span> <span class="nav-text">How Do These Solvers Find
 the Roots?</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#recursive-function%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0"><span class="nav-number">3.3.</span> <span class="nav-text">recursive function(递归函数)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#factorial-recursive-function"><span class="nav-number">3.3.1.</span> <span class="nav-text">factorial recursive function</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E5%BC%8F%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.</span> <span class="nav-text">线性方程式与线性系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#linear-equation"><span class="nav-number">4.1.</span> <span class="nav-text">linear equation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#solving-linear-equations"><span class="nav-number">4.1.1.</span> <span class="nav-text">solving linear equations</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#gaussian-elimination"><span class="nav-number">4.1.1.1.</span> <span class="nav-text">Gaussian Elimination</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#lu-factorization"><span class="nav-number">4.1.1.2.</span> <span class="nav-text">LU Factorization</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#matrix-left-divisionormldivide"><span class="nav-number">4.1.1.3.</span> <span class="nav-text">Matrix Left
 Division:\ormldivide()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#matrix-decomposition-functions"><span class="nav-number">4.1.1.4.</span> <span class="nav-text">Matrix Decomposition
-Functions</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#cramersinverse-method"><span class="nav-number">4.1.1.5.</span> <span class="nav-text">Cramer&#39;s(Inverse) Method</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linear-system"><span class="nav-number">4.2.</span> <span class="nav-text">linear system</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#eigenvalues-and-eigenvectors"><span class="nav-number">4.2.1.</span> <span class="nav-text">Eigenvalues and Eigenvectors</span></a></li></ol></li></ol></li></ol></div>
+Functions</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#cramersinverse-method"><span class="nav-number">4.1.1.5.</span> <span class="nav-text">Cramer&#39;s(Inverse) Method</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linear-system"><span class="nav-number">4.2.</span> <span class="nav-text">linear system</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#eigenvalues-and-eigenvectors"><span class="nav-number">4.2.1.</span> <span class="nav-text">Eigenvalues and Eigenvectors</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1"><span class="nav-number">5.</span> <span class="nav-text">统计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#statistics"><span class="nav-number">5.1.</span> <span class="nav-text">statistics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#descriptive-statistics"><span class="nav-number">5.2.</span> <span class="nav-text">Descriptive Statistics</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#figures-are-always-more-powerful"><span class="nav-number">5.2.1.</span> <span class="nav-text">Figures Are Always More
+Powerful</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#boxplot"><span class="nav-number">5.2.1.1.</span> <span class="nav-text">Boxplot</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#skewness%E6%89%AD%E6%9B%B2%E7%A8%8B%E5%BA%A6"><span class="nav-number">5.2.1.2.</span> <span class="nav-text">Skewness(扭曲程度)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#kurtosis%E5%B9%B3%E7%BC%93%E6%88%96%E5%B0%96%E9%94%90%E7%A8%8B%E5%BA%A6"><span class="nav-number">5.2.1.3.</span> <span class="nav-text">Kurtosis(平缓或尖锐程度)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inferential-statistics"><span class="nav-number">5.3.</span> <span class="nav-text">Inferential Statistics</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#statistical-hypothesis-testing"><span class="nav-number">5.3.1.</span> <span class="nav-text">Statistical Hypothesis
+Testing</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#common-hypothesis-tests"><span class="nav-number">5.3.2.</span> <span class="nav-text">Common Hypothesis Tests</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -232,7 +234,7 @@ Functions</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" hr
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-16 17:32:16" itemprop="dateModified" datetime="2022-08-16T17:32:16+08:00">2022-08-16</time>
+      <time title="修改时间：2022-08-17 21:33:29" itemprop="dateModified" datetime="2022-08-17T21:33:29+08:00">2022-08-17</time>
     </span>
 
   
@@ -1162,6 +1164,240 @@ src="https://pic4.zhimg.com/80/v2-0aaee9250667f10b658105ebc8bfc999.jpg"
 alt="效果" />
 <figcaption aria-hidden="true">效果</figcaption>
 </figure>
+<h2 id="统计">统计</h2>
+<h3 id="statistics">statistics</h3>
+<ul>
+<li>The science of "data"</li>
+<li>Involving the collection,analysis interpretation,presentation,and
+organization of data</li>
+<li>Main Statistical Methodologies
+<ul>
+<li>Descriptive Statistics</li>
+<li>Inferential(推论) Statistics</li>
+</ul></li>
+<li>Summary Measures
+<ul>
+<li>Central Tendency:Mean(平均数),Median(中位数),Mode</li>
+<li>Quartile(四份位)</li>
+<li>Variation(离散):Range,Variance,Standard Deviation(标准差)</li>
+</ul></li>
+</ul>
+<h3 id="descriptive-statistics">Descriptive Statistics</h3>
+<ul>
+<li>Suppose we have samples:</li>
+<li>Variance:<span class="math inline">\(s=\frac{\sum
+(x_i-\bar{x})^2}{n-1}\)</span></li>
+<li>Standard deviation:<span
+class="math inline">\(sd=\sqrt{s}\)</span></li>
+<li>操作:</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">code</th>
+<th style="text-align: center;">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>mean</code></td>
+<td style="text-align: center;">Average or mean value of array</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>median</code></td>
+<td style="text-align: center;">Median value of array</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>mode</code></td>
+<td style="text-align: center;">Most frequent values in array</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>prctile</code></td>
+<td style="text-align: center;">Percentiles of a data set</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>max</code></td>
+<td style="text-align: center;">Largest elements in array</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>min</code></td>
+<td style="text-align: center;">Smallest elements in array</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>std</code></td>
+<td style="text-align: center;">Standard deviation</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>var</code></td>
+<td style="text-align: center;">Variance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exercise:</strong></p>
+<ul>
+<li>Find the following properties of the variable x4
+<ol type="1">
+<li>Mean,median,mode,and quartile</li>
+<li>Range and interquartile range</li>
+<li>Variance and standard deviation</li>
+</ol></li>
+<li>加载数据
+<code>load stockreturns;</code>以及<code>x4=stocks(:,4);</code></li>
+</ul>
+<h4 id="figures-are-always-more-powerful">Figures Are Always More
+Powerful</h4>
+<ul>
+<li>Suppose we have samples:<br />
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">1</span>:<span class="number">14</span>;</span><br><span class="line">freqy=[<span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">4</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">3</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span>];</span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">3</span>,<span class="number">1</span>);bar(x,freqy);xlim([<span class="number">0</span> <span class="number">15</span>]);</span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>);area(x,freqy);xlim([<span class="number">0</span> <span class="number">15</span>]);</span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">3</span>,<span class="number">3</span>);stem(x,freqy);xlim([<span class="number">0</span> <span class="number">15</span>]);</span><br><span class="line"></span><br></pre></td></tr></table></figure> <img
+src="https://pic4.zhimg.com/80/v2-3dfbbff09be81b8feb867d38cf3c1a59.jpg"
+alt="结果" /></li>
+</ul>
+<h5 id="boxplot">Boxplot</h5>
+<ul>
+<li>描述对象:quartile,median,max,min <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">marks=[<span class="number">80</span> <span class="number">81</span> <span class="number">81</span> <span class="number">84</span> <span class="number">88</span> <span class="number">92</span> <span class="number">92</span> <span class="number">94</span> <span class="number">96</span> <span class="number">97</span>];</span><br><span class="line">boxplot(marks);</span><br><span class="line">prctile(marks,[<span class="number">25</span> <span class="number">50</span> <span class="number">75</span>]);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<figure>
+<img
+src="https://pic4.zhimg.com/80/v2-916825404279e03c730bd8ca3cd3690e.jpg"
+alt="结果" />
+<figcaption aria-hidden="true">结果</figcaption>
+</figure>
+<h5 id="skewness扭曲程度">Skewness(扭曲程度)</h5>
+<ul>
+<li>A measure of distribution skewness
+<ul>
+<li>Left-skewed:skewness<span class="math inline">\(\lt 0\)</span>,<span
+class="math inline">\(Mean \lt Median \lt Mode\)</span></li>
+<li>Right-skewed:skewness<span class="math inline">\(\gt
+0\)</span>,<span class="math inline">\(Mode \lt Median \lt
+Mean\)</span></li>
+<li>Symmetric:<span class="math inline">\(Mean=Median=Mode\)</span></li>
+</ul></li>
+<li><code>skewness()</code> <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">X=<span class="built_in">randn</span>([<span class="number">10</span> <span class="number">3</span>])*<span class="number">3</span>;</span><br><span class="line">X(X(:,<span class="number">1</span>)&lt;<span class="number">0</span>,<span class="number">1</span>)=<span class="number">0</span>;X(X(:,<span class="number">3</span>)&gt;<span class="number">0</span>,<span class="number">3</span>)=<span class="number">0</span>;</span><br><span class="line">boxplot(X,&#123;<span class="string">&#x27;Right-skewed&#x27;</span>,<span class="string">&#x27;Symmetric&#x27;</span>,<span class="string">&#x27;Left-skewed&#x27;</span>&#125;);</span><br><span class="line">y=skewness(X)</span><br></pre></td></tr></table></figure> <img
+src="https://pic4.zhimg.com/80/v2-306706468abeb4313eb2de6828109ac7.jpg"
+alt="结果" /></li>
+</ul>
+<h5 id="kurtosis平缓或尖锐程度">Kurtosis(平缓或尖锐程度)</h5>
+<ul>
+<li>A measure of distribution flatness<br />
+</li>
+<li>A kurtosis of a normal distribution is zero
+<ul>
+<li>Positive Kurtosis:more acute peak</li>
+<li>Negative Kurtosis:more flat peak</li>
+</ul></li>
+</ul>
+<h3 id="inferential-statistics">Inferential Statistics</h3>
+<ul>
+<li>Methods to make estimates,decisions,and predictions using sample
+data</li>
+</ul>
+<h4 id="statistical-hypothesis-testing">Statistical Hypothesis
+Testing</h4>
+<ul>
+<li>A method of making decisions using data</li>
+<li>Example:Am I going to get grade A in this class?</li>
+<li>Typical hypothesis:
+<ul>
+<li><span class="math inline">\(H_0:\theta=\theta_0\)</span> vs <span
+class="math inline">\(H_1:\theta \neq \theta_0\)</span></li>
+<li><span class="math inline">\(H_0:\theta \ge\theta_0\)</span> vs <span
+class="math inline">\(H_1:\theta \lt \theta_0\)</span></li>
+<li><span class="math inline">\(H_0:\theta \le\theta_0\)</span> vs <span
+class="math inline">\(H_1:\theta \gt \theta_0\)</span> where <span
+class="math inline">\(H_0\)</span> is null hypothesis,and <span
+class="math inline">\(H_1\)</span> is alternative hypothesis</li>
+</ul></li>
+</ul>
+<p>Hypothesis Testing Procedure</p>
+<ul>
+<li>Determine a probability ,say 0.95(confidence level),for the
+hypothesis test</li>
+<li>Find the 95% "confidence Interval" of the <span
+class="math inline">\(H_0\)</span></li>
+<li>Check if your score falls into the interval<br />
+</li>
+<li>Terminology in Hypothesis Testing
+<ul>
+<li>Confidence interval</li>
+<li>Confidence level<span class="math inline">\((1-\alpha)\)</span></li>
+<li>Significance level <span class="math inline">\(\alpha\)</span></li>
+<li>p-value</li>
+</ul></li>
+</ul>
+<p>t-test Example</p>
+<ul>
+<li>Are means of the two stock returns(#3and$10) the same?
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">load stockreturns;</span><br><span class="line">x1=stocks(:,<span class="number">3</span>);x2=stocks(:,<span class="number">10</span>);</span><br><span class="line">boxplot([x1,x2],&#123;<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;10&#x27;</span>&#125;);</span><br><span class="line">[h,p]=ttest2(x1,x2)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">h =</span><br><span class="line"></span><br><span class="line">     <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">p =</span><br><span class="line"></span><br><span class="line">    <span class="number">0.0423</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure> <img
+src="https://pic4.zhimg.com/80/v2-4cee80d32e505ee46d27eef389f67ee0.jpg"
+alt="结果" /></li>
+</ul>
+<p>Two-tailed and One-tailed Significance Test</p>
+<ul>
+<li>Using a 5% significance level</li>
+</ul>
+<h4 id="common-hypothesis-tests">Common Hypothesis Tests</h4>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">Paired data</th>
+<th style="text-align: center;">Unpaired data</th>
+<th style="text-align: center;">More than two groups</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Parametric</td>
+<td style="text-align: center;">z-test and t-test</td>
+<td style="text-align: center;">two-sample t-test</td>
+<td style="text-align: center;">Analysis of variance (ANOVA)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Non-parametric</td>
+<td style="text-align: center;">Sign test and Wilcoxon signed-rank
+tess</td>
+<td style="text-align: center;">Wilcoxn rank-sum test</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">code</th>
+<th style="text-align: center;">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>ranksum()</code></td>
+<td style="text-align: center;">Wilcoxon rank sum test</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>signrank()</code></td>
+<td style="text-align: center;">Wilcoxon signed rank test</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>ttest()</code></td>
+<td style="text-align: center;">One-sample and paired-sample t-test</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>ttest2()</code></td>
+<td style="text-align: center;">Two-sample t-test</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>ztest()</code></td>
+<td style="text-align: center;">z-test</td>
+</tr>
+</tbody>
+</table>
 
     </div>
 
