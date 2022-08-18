@@ -2507,7 +2507,7 @@ mjx-container[display='true'] + br {
 @media (max-width: 991px) {
   .header-inner {
     border-radius: initial;
-    width: 100%;
+    width: auto;
   }
 }
 .main {
@@ -2530,7 +2530,7 @@ mjx-container[display='true'] + br {
 @media (max-width: 991px) {
   .main {
     display: block;
-    width: 100%;
+    width: auto;
   }
 }
 .main-inner {
@@ -2551,7 +2551,7 @@ mjx-container[display='true'] + br {
   .footer-inner {
     padding-left: 0;
     padding-right: 0;
-    width: 100%;
+    width: auto;
   }
 }
 .site-brand-container {
